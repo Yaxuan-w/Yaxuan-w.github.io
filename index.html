@@ -31,13 +31,19 @@
 
     <hr>
     <h2><a name="research">Research</a></h2>
-    My current research lies in system security and software supply chain security, with a focus on building trustworthy system infrastructures that minimize trust assumptions across the software stack.
-    My interests span secure compilation, runtime isolation, and operating systems, with particular emphasis on mitigating software supply chain threats and improving the verifiability and transparency of system behavior.
+    <p>My research lies at the intersection of operating systems security and software supply-chain security. Across these areas, a common theme is minimizing the trust assumptions across the software stack. Rather than assuming that ambient host environments or untrusted intermediaries behave correctly, these systems derive their security properties from explicit trust boundaries, enforceable mechanisms, and independently verifiable evidence.</p>
+
+    <p>I am also a maintainer of the open-source <a href="https://lind-project.github.io">Lind Project</a>.</p>
+    
+    <p><b>My current work spans two directions:</b></p>
+    <p><b>Trustworthy compilation.</b> <a href="https://github.com/Lind-Project/TriSeal">TriSeal</a> is a prototype for attestable, closed-world compilation. It treats a build as a declared transformation over declared inputs, performed under a declared execution policy inside a hardware-measured boundary. Rather than trusting the build host, verifiers can check that an artifact is bound to a specific compiler, set of inputs, execution policy, and measured environment. This approach addresses the build-environment risks highlighted by supply-chain compromises such as SolarWinds and XZ.</p>
+    <p><b>Composable OS policies.</b> My work <a href="https://github.com/Lind-Project/lind-wasm-example-grates">Grate</a> in the Lind Project focuses on designing and implementing a userspace architecture for composing independently developed system-call policies. Each policy component runs in isolated compartments inside a single unprivileged host process and can inspect, filter, transform, forward, or service system calls before they reach the host operating system. These components can be combined differently for each workload, bringing the Unix pipeline philosophy to OS policy enforcement without kernel modifications or elevated privilege.</p>
 
     <!-- <hr>
     <h2><a name="publications">Publications (* indicates equal contribution)</a></h2> -->
 
     <hr>
     <h2><a name="talks">Talks</a></h2>
+    <b>[Nov 2025] Open Source SecurityCon NA</b> - <a href="https://www.youtube.com/watch?v=b7rCA7MgBcw">You Can Sign It, But Can You Trust It? Securing the Compilation Process</a><br>
     <b>[Feb 2025] NESysDay</b> - Caging: An Abstraction For Finer-grained Isolation
 </html>
